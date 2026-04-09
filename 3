@@ -1,0 +1,21 @@
+def sumOfSquaresDistinctCounts(nums):
+    n = len(nums)
+    total = 0
+    
+    # Iterate over all subarrays
+    for i in range(n):
+        seen = set()
+        for j in range(i, n):
+            seen.add(nums[j])  # add element to set
+            distinct_count = len(seen)
+            total += distinct_count ** 2  # add square of distinct count
+    
+    return total
+
+# Example 1
+nums = [1,2,1]
+print(sumOfSquaresDistinctCounts(nums))  # Output: 15
+
+# Example 2
+nums = [1,1]
+print(sumOfSquaresDistinctCounts(nums))  # Output: 3
