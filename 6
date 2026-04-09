@@ -1,0 +1,21 @@
+def process_list(nums):
+    # Handle empty list case
+    if not nums:
+        return None  # or return "List is empty"
+    
+    # Sort the list
+    nums.sort()
+    
+    # The maximum element will be the last one in the sorted list
+    return nums[-1]
+
+# Test Cases
+
+# 1. Empty List
+print(process_list([]))          # Expected Output: None
+
+# 2. Single Element List
+print(process_list([5]))         # Expected Output: 5
+
+# 3. All Elements are the Same
+print(process_list([3, 3, 3, 3, 3]))  # Expected Output: 3
